@@ -1,6 +1,6 @@
 import * as d3 from "d3";
 
-d3.csv("../police_killings.csv").then((table) => {
+d3.csv("police_killings.csv").then((table) => {
   console.log(table);
 
   // let toolDiv = document.querySelector("#toolTip");
