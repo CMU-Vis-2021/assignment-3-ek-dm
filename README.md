@@ -9,10 +9,6 @@ The bar graph provides an effective means of comparison between number of killin
 ## Development Process
 Overall, we collaboratively worked on the assignment, from researching other D3 examples online, to debugging and testing the code. With the exception of using Darren's data set from the last assignment and using that as a reference to select what kind of interactive graph we wanted to make, we spent almost all of our time working on programming and implementing the code. In total, we spent roughly 15-16 hours on the assignment. A lot of time was spent trying to utilize reference material we found online and tweaking it so that it would work with our data set and code. Having said that, since neither one of us had ever used D3 before this class, this was something we struggled with a lot and failed to implement a lot of the features that we initially had wanted to, such as a creating a secondary stacked graph, or a way to sort the bar chart from ascending / descending order. 
 
-# a3-template
-
-Template for Assignment 3. It comes pre-loaded with D3 and Vega.
-
 ## Setup
 
 This template uses the same setup as the D3 crashcourse template.
