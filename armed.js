@@ -10,8 +10,6 @@ d3.csv("police_killings.csv").then((table) => {
   let race = Array.from(d3.rollup(table, v => v.length, d => d.raceethnicity))
   let race2 = Array.from(d3.rollup(table, v => v.length, d => d.raceethnicity, d => d.armed))
   let race3 = race2.map(d => [d[0], Array.from(d[1])])
-
-  let margin = ({top: 20, right: 0, bottom: 30, left: 40});
   
   console.log(race);
   // console.log(race2);
@@ -36,7 +34,6 @@ d3.csv("police_killings.csv").then((table) => {
   .attr("margin", {top: 20, right: 20, bottom: 30, left: 50})
   .attr("width", 700)
   .attr("height", 600);
-  // .call(zoom);
 
   svg
   .selectAll("rect")
@@ -79,19 +76,3 @@ d3.csv("police_killings.csv").then((table) => {
   svg.append("g").attr("transform", `translate(${padding}, 0)`).call(yAxis);
 
 });
-
-// function zoom(svg) {
-//   const extent = [[margin.left, margin.top], [width - margin.right, height - margin.top]];
-
-//   svg.call(d3.zoom()
-//       .scaleExtent([1, 8])
-//       .translateExtent(extent)
-//       .extent(extent)
-//       .on("zoom", zoomed));
-
-//   function zoomed(event) {
-//     x.range([margin.left, width - margin.right].map(d => event.transform.applyX(d)));
-//     svg.selectAll(".bars rect").attr("x", d => x(d.name)).attr("width", x.bandwidth());
-//     svg.selectAll(".x-axis").call(xAxis);
-//   }
-// }
